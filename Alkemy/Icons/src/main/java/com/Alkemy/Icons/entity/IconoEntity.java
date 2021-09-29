@@ -1,4 +1,4 @@
 package com.Alkemy.Icons.entity;
 
-public class IconEntity {
+public class IconoEntity {
 }
