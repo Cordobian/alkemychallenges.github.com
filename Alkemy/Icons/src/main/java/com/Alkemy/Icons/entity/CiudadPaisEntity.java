@@ -3,8 +3,8 @@ package com.Alkemy.Icons.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "`pais`")
-public class PaisEntity {
+@Table(name = "`ciudadPais`")
+public class CiudadPaisEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -1,10 +1,12 @@
 package com.Alkemy.Icons.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
-@Table(name = "`continente`")
-public class ContinenteEntity {
+@Table(name = "`Iconos`")
+
+public class IconoGeograficoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -16,8 +18,16 @@ public class ContinenteEntity {
     @Column
     private String denominacion;
 
+    @Column
+    private Date fechaCreacion;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @Column
+    private float altura;
+
+    @Column
+    private String historia;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "ciudadPais_id")
     private CiudadPaisEntity ciudadPais;
 }
